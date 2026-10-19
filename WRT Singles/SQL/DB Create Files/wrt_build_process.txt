@@ -1,0 +1,38 @@
+To stand up a new Rball database:
+
+(some of these are created and saved anew, others just run from IRT dirs)
+
+Create these tables:
+- banner
+- missed_tourney_rpt
+- player_profile
+- rankings
+- rankings_source
+- results
+- results_staging
+- season_summary_rpt
+- seedings
+- seedings_staging
+- tour_champions
+- tourneys
+- wins
+
+Data loading: see separate file
+x banner; populated upon creation
+x missed_tourney_rpt; n/a; created on the fly during reporting.
+- player_profile: don't really have this data.
+- rankings: don't really have this data.
+- rankings_source: don't really have this data.
+x results; loaded, see wrt_build.sql
+x results_staging: n/a: used for staging data
+x season_summary_rpt: n/a, created on the fly during reporting.
+x seedings: loaded, see wrt_build.sql
+x seedings_staging: n/a: used for staging data
+- tour_champions; don't really have this data.
+x tourneys; one time creation, done
+x wins; one time creation done.
+
+
+
+
+
