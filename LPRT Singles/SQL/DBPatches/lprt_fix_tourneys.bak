@@ -1,0 +1,109 @@
+-- Ongoing fixing of tourneys table given massive data load
+
+-- 1/27/17: fixed and put in place holders for future major tourney fixing.
+
+
+
+use cp30725_women;
+
+SET SQL_SAFE_UPDATES = 0;
+
+create table tourneys_20170123 as select * from tourneys;
+
+select * from tourneys;
+
+truncate table tourneys;
+
+
+------------------------
+-- Main insert
+
+insert into tourneys (city,event,date,tmp_date,season,major_flag)
+select distinct city,event,date,tmp_date,season,'N' from results;
+
+-- Individual Major designations outside of US Open
+
+update tourneys set major_flag='Y' where event='1975 NRC DP/Leach Nationals';
+update tourneys set major_flag='Y' where event='NRC DP/Leach Nationals 76';
+update tourneys set major_flag='Y' where event='NRC DP/Leach Nationals 77';
+update tourneys set major_flag='Y' where event='NRC DP/Leach Nationals 78';
+update tourneys set major_flag='Y' where event='NRC DP/Leach Nationals 79';
+-- DP/Leach Nationals in 1980?
+-- DP/Leach Nationals in 1981?
+-- DP/Leach Nationals in 1982?
+update tourneys set major_flag='Y' where event='Ektelon/Pony Nationals 82';
+-- All 3 Nationals in 1983?
+update tourneys set major_flag='Y' where event='Ektelon Nationals 84';
+update tourneys set major_flag='Y' where event='DP/Leach Nationals 84';
+update tourneys set major_flag='Y' where event='Ektelon Nationals 85';
+update tourneys set major_flag='Y' where event='DP Nationals Boston 85';
+update tourneys set major_flag='Y' where event='Ektelon Nationals Anaheim 86';
+update tourneys set major_flag='Y' where event='DP Nationals Arlington 86';
+-- Looks like Nationals collapsed in 87
+
+update tourneys set major_flag='Y' where event='Foxwoods Pro Nationals 97';
+-- Missing Foxwoods Pro Nationals 98?
+update tourneys set major_flag='Y' where event='Bud Light Pro Nationals 99';
+update tourneys set major_flag='Y' where event='Bud Light Irt Pro Nationals 00';
+update tourneys set major_flag='Y' where event='Pro Nationals 01';
+update tourneys set major_flag='Y' where event='Pro Nationals 02';
+update tourneys set major_flag='Y' where event='Pro Nationals 03';
+-- Pro nationals 04 in Las Vegas?
+-- Pro nationals in 05 in Chicago?
+
+update tourneys set major_flag='Y' where event='Ektelon WPRO World Championships';
+update tourneys set major_flag='Y' where event='WPRO Ektelon World Championships 2010';
+update tourneys set major_flag='Y' where event='World Professional Racquetball Championship - Cali 2010';
+update tourneys set major_flag='Y' where event='2011 LA WPRO Ektelon World Championships';
+update tourneys set major_flag='Y' where event='2013 Ektelon Nationals';
+update tourneys set major_flag='Y' where event='2014 LPRT Ektelon Nationals';
+update tourneys set major_flag='Y' where event='2015 LPRT Pro Nationals Presented by Ektelon';
+
+-- US Opens; remember; missing 11th US Open in Nov, 2006 in the 2006-07 season
+
+update tourneys set major_flag='Y' where city='Memphis, TN' and season >='1996-97' and season <= '2009-10';
+
+update tourneys set major_flag='Y' where city='Minneapolis, MN' and season >= '2010-11';
+
+commit;
+
+
+
+
+
+
+
+------------------------
+
+-- supporting test code
+
+create table tourneys_20161208 as select * from tourneys;
+
+select * from tourneys where major_flag='Y';
+
+truncate table tourneys;
+
+select * from tourneys order by tmp_date;
+
+select * from tourneys where season='2000-01' order by tmp_date;
+
+select * from tourneys where city='Memphis, TN' and season >='1996-97' and season <= '2009-10' order by tmp_date;
+
+select * from tourneys where city='Minneapolis, MN' and season >= '2010-11' order by tmp_date;
+
+truncate table tourneys;
+
+select * from tourneys;
+
+-- insert into tourneys (city,event,date,tmp_date,season,major_flag) values ('Memphis, TN','Hilton 6th US Open','11/20/2001','2001-11-20','2001-02','Y');
+
+select * from results where source='placeholder';
+
+delete from results where source='placeholder';
+
+-- insert into results (winner, loser, round,score,tour,city,event,date,source,tmp_date) values ('?','?',2,'','LPRA','Memphis, TN','Hilton 6th US Open','11/20/2001','placeholder','2001-11-20');
+
+-- update results set season='2001-02' where event='Hilton 6th US Open';
+
+
+commit;

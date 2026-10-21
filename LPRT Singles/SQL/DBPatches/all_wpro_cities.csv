@@ -1,0 +1,108 @@
+city,
+Albuquerque,update wpro_results set city='Albuquerque' where city='Albuquerque';
+Anaheim,update wpro_results set city='Anaheim' where city='Anaheim';
+Anchorage,update wpro_results set city='Anchorage' where city='Anchorage';
+Annapolis,update wpro_results set city='Annapolis' where city='Annapolis';
+Arlington,update wpro_results set city='Arlington' where city='Arlington';
+"Arlington, VA","update wpro_results set city='Arlington, VA' where city='Arlington, VA';"
+Arvada,update wpro_results set city='Arvada' where city='Arvada';
+Atlanta,update wpro_results set city='Atlanta' where city='Atlanta';
+Auburn,update wpro_results set city='Auburn' where city='Auburn';
+Baltimore,update wpro_results set city='Baltimore' where city='Baltimore';
+Bangor,update wpro_results set city='Bangor' where city='Bangor';
+Belleville,update wpro_results set city='Belleville' where city='Belleville';
+Bloomingdale,update wpro_results set city='Bloomingdale' where city='Bloomingdale';
+Boise,update wpro_results set city='Boise' where city='Boise';
+Boston,update wpro_results set city='Boston' where city='Boston';
+"Burlington, VT","update wpro_results set city='Burlington, VT' where city='Burlington, VT';"
+Canoga Park,update wpro_results set city='Canoga Park' where city='Canoga Park';
+Chalfont,update wpro_results set city='Chalfont' where city='Chalfont';
+Charlotte,update wpro_results set city='Charlotte' where city='Charlotte';
+Chattanooga,update wpro_results set city='Chattanooga' where city='Chattanooga';
+Chicago,update wpro_results set city='Chicago' where city='Chicago';
+Cincinnati,update wpro_results set city='Cincinnati' where city='Cincinnati';
+Co Springs,update wpro_results set city='Co Springs' where city='Co Springs';
+Colma,update wpro_results set city='Colma' where city='Colma';
+Columbus,update wpro_results set city='Columbus' where city='Columbus';
+Coral Gables,update wpro_results set city='Coral Gables' where city='Coral Gables';
+Coral Springs,update wpro_results set city='Coral Springs' where city='Coral Springs';
+Costa Mesa,update wpro_results set city='Costa Mesa' where city='Costa Mesa';
+"Dallas, TX","update wpro_results set city='Dallas, TX' where city='Dallas, TX';"
+Denver,update wpro_results set city='Denver' where city='Denver';
+Edmonton,update wpro_results set city='Edmonton' where city='Edmonton';
+Escondido,update wpro_results set city='Escondido' where city='Escondido';
+Essex Junction,update wpro_results set city='Essex Junction' where city='Essex Junction';
+Fayetteville,update wpro_results set city='Fayetteville' where city='Fayetteville';
+Federal Way,update wpro_results set city='Federal Way' where city='Federal Way';
+Fishkill,update wpro_results set city='Fishkill' where city='Fishkill';
+Fort Worth,update wpro_results set city='Fort Worth' where city='Fort Worth';
+Fountain Valley,update wpro_results set city='Fountain Valley' where city='Fountain Valley';
+Ft Lauderdale,update wpro_results set city='Ft Lauderdale' where city='Ft Lauderdale';
+Gaithersburg,update wpro_results set city='Gaithersburg' where city='Gaithersburg';
+Greensboro,update wpro_results set city='Greensboro' where city='Greensboro';
+Hawaii,update wpro_results set city='Hawaii' where city='Hawaii';
+Hershey,update wpro_results set city='Hershey' where city='Hershey';
+Houston,update wpro_results set city='Houston' where city='Houston';
+Kent,update wpro_results set city='Kent' where city='Kent';
+King of Prussia,update wpro_results set city='King of Prussia' where city='King of Prussia';
+Lafayette,update wpro_results set city='Lafayette' where city='Lafayette';
+Las Vegas,update wpro_results set city='Las Vegas' where city='Las Vegas';
+"Laurel, MD","update wpro_results set city='Laurel, MD' where city='Laurel, MD';"
+Lombard,update wpro_results set city='Lombard' where city='Lombard';
+Los Angeles,update wpro_results set city='Los Angeles' where city='Los Angeles';
+Lynwood,update wpro_results set city='Lynwood' where city='Lynwood';
+Manchester,update wpro_results set city='Manchester' where city='Manchester';
+Mayfield,update wpro_results set city='Mayfield' where city='Mayfield';
+"Mclean, VA","update wpro_results set city='Mclean, VA' where city='Mclean, VA';"
+Melbourne,update wpro_results set city='Melbourne' where city='Melbourne';
+Memphis,update wpro_results set city='Memphis' where city='Memphis';
+"Memphis, TN","update wpro_results set city='Memphis, TN' where city='Memphis, TN';"
+Miami,update wpro_results set city='Miami' where city='Miami';
+Milpitas,update wpro_results set city='Milpitas' where city='Milpitas';
+Milwaukee,update wpro_results set city='Milwaukee' where city='Milwaukee';
+Minneapolis,update wpro_results set city='Minneapolis' where city='Minneapolis';
+Nashville,update wpro_results set city='Nashville' where city='Nashville';
+New Haven,update wpro_results set city='New Haven' where city='New Haven';
+New Orleans,update wpro_results set city='New Orleans' where city='New Orleans';
+"New Orleans, LA","update wpro_results set city='New Orleans, LA' where city='New Orleans, LA';"
+New York,update wpro_results set city='New York' where city='New York';
+Newport Beach,update wpro_results set city='Newport Beach' where city='Newport Beach';
+Ohio,update wpro_results set city='Ohio' where city='Ohio';
+Oklahoma,update wpro_results set city='Oklahoma' where city='Oklahoma';
+Omaha,update wpro_results set city='Omaha' where city='Omaha';
+Palantine,update wpro_results set city='Palantine' where city='Palantine';
+Panama,update wpro_results set city='Panama' where city='Panama';
+Philadelphia,update wpro_results set city='Philadelphia' where city='Philadelphia';
+Phoenix,update wpro_results set city='Phoenix' where city='Phoenix';
+Pleasanton,update wpro_results set city='Pleasanton' where city='Pleasanton';
+Plymouth,update wpro_results set city='Plymouth' where city='Plymouth';
+Portland,update wpro_results set city='Portland' where city='Portland';
+Pro Nationals,update wpro_results set city='Pro Nationals' where city='Pro Nationals';
+Quebec City,update wpro_results set city='Quebec City' where city='Quebec City';
+Roanoke,update wpro_results set city='Roanoke' where city='Roanoke';
+Rosarito Beach,update wpro_results set city='Rosarito Beach' where city='Rosarito Beach';
+Sacramento,update wpro_results set city='Sacramento' where city='Sacramento';
+San Antonio,update wpro_results set city='San Antonio' where city='San Antonio';
+San Diego,update wpro_results set city='San Diego' where city='San Diego';
+San Francisco,update wpro_results set city='San Francisco' where city='San Francisco';
+Santa Ana,update wpro_results set city='Santa Ana' where city='Santa Ana';
+Saskatoon,update wpro_results set city='Saskatoon' where city='Saskatoon';
+Seattle,update wpro_results set city='Seattle' where city='Seattle';
+Sellersville,update wpro_results set city='Sellersville' where city='Sellersville';
+Southfield,update wpro_results set city='Southfield' where city='Southfield';
+St. Louis,update wpro_results set city='St. Louis' where city='St. Louis';
+Stockton,update wpro_results set city='Stockton' where city='Stockton';
+"Stockton, CA","update wpro_results set city='Stockton, CA' where city='Stockton, CA';"
+Syracuse,update wpro_results set city='Syracuse' where city='Syracuse';
+Syracuse?,update wpro_results set city='Syracuse?' where city='Syracuse?';
+Tempe,update wpro_results set city='Tempe' where city='Tempe';
+Tijuana,update wpro_results set city='Tijuana' where city='Tijuana';
+Toronto,update wpro_results set city='Toronto' where city='Toronto';
+Vancouver,update wpro_results set city='Vancouver' where city='Vancouver';
+Warwick,update wpro_results set city='Warwick' where city='Warwick';
+Watertown,update wpro_results set city='Watertown' where city='Watertown';
+Westminster,update wpro_results set city='Westminster' where city='Westminster';
+"Wilmington, NC","update wpro_results set city='Wilmington, NC' where city='Wilmington, NC';"
+Winnipeg,update wpro_results set city='Winnipeg' where city='Winnipeg';
+York,update wpro_results set city='York' where city='York';
+"York, PA","update wpro_results set city='York, PA' where city='York, PA';"

@@ -1,0 +1,479 @@
+/*
+filename: Womens_master_name_cleanup.sql
+purpose: SQL to clean up the womens names in results
+
+modification history
+when    who     what
+10/22/16        tboss   creation
+12/1/16 tboss   saving more cleanup
+12/8/16: tboss  putting all name cleanup commands in ONE place.  Results, rankings, seedings, player_profile.
+12/9/16: tboss  converted to use sp_fixname
+12/9/16: tboss	did another run through the names and re-ran cleanup, found a ton more.
+12/22/16: tboss	saved off new work while doing r2sports tourney entry.
+
+Usage: n/a: one-off working commands used to fix certain things in databases
+
+Prerequisites to run: none
+
+Other notes: none
+
+*/
+
+
+-- LPRT master name cleanup
+
+use cp30725_women;
+
+SET SQL_SAFE_UPDATES = 0;
+
+/*
+select distinct winner as name from results union
+select distinct loser as name from results union
+select distinct player from rankings union
+select distinct player from seedings union
+select player from player_profile
+order by 1;
+
+create table results_prenamefix_20162210 as select * from results;
+
+select * from results where winner='Carplo, Jvonne' or loser='Carplo, Jvonne';
+select * from results where winner='Carpio, Ivonne' or loser='Carpio, Ivonne';
+*/
+
+-- Fixes:
+
+-- Apostrophe names to address:
+
+-- Davis, D'amonique
+-- Grand'Maitre, Josee
+-- O'Brien, Molly
+
+call sp_fixname ('OBrien, Molly','O''Brien, Molly');
+call sp_fixname ('OBrien, Molly','O''brien, Molly');
+call sp_fixname ('OBrien, Molly','Obrien, Molly');
+
+call sp_fixname ('Davis, Damonique','Davis, D''amonique');
+call sp_fixname ('Davis, Damonique','Davis, Da''monique');
+
+call sp_fixname ('GrandMaitre, Josee','Grand''Maitre, Josee');
+call sp_fixname ('GrandMaitre, Josee','Grand Maitre, Josee');
+
+----
+
+call sp_fixname ('Acosta, Susana','Acosta, Susy');
+call sp_fixname ('Acosta, Susana','Acosta-Mendoza, Susy');
+
+call sp_fixname ('Carpio, Ivonne','Carplo, Jvonne');
+call sp_fixname ('Carpio, Ivonne','Carplo, Ivonne');
+
+
+call sp_fixname ('Haynes (Fisher), Adrienne','Fisher, Adrienne');
+call sp_fixname ('Haynes (Fisher), Adrienne','Haynes, Adrienne');
+call sp_fixname ('Haynes (Fisher), Adrienne','Fisher Haynes, Adrienne');
+call sp_fixname ('Haynes (Fisher), Adrienne','Fisher Haynes');
+
+call sp_fixname ('Fisher, Kelley','Fisher, Kelly');
+
+call sp_fixname ('Drexler (Greer), Marci','Greer, Marci');
+call sp_fixname ('Drexler (Greer), Marci','Drexler, Marci');
+
+call sp_fixname ('Gudinas, Cheryl','Gudinas Holmes, Cheryl');
+call sp_fixname ('Gudinas, Cheryl','Gudinas-Holmes, Cheryl');
+
+call sp_fixname ('Guillemette, Veronique','Guillemette, Vernoique');
+call sp_fixname ('Guillemette, Veronique','Guillimette, Veronique');
+call sp_fixname ('Guillemette, Veronique','Guillimette, Veronica');
+call sp_fixname ('Guillemette, Veronique','Guillemette, Veronica');
+
+
+call sp_fixname ('Kwon, Marie Malhee','Kwon, Malhee');
+
+call sp_fixname ('Loredo, Arantza','Lored, Arantza');
+
+call sp_fixname ('Pimentelli, Devon','Pinentelli, Devon');
+
+call sp_fixname ('Paraiso, Jackie','Paraiso-Gibson, Jackie');
+call sp_fixname ('Paraiso, Jackie','Gibson, Jackie');
+call sp_fixname ('Paraiso, Jackie','Rice, Jackie');
+call sp_fixname ('Paraiso, Jackie','Paraiso Rice, Jackie');
+call sp_fixname ('Paraiso, Jackie','Paraiso-Rice, Jackie');
+call sp_fixname ('Paraiso, Jackie','Rice, Jackie Paraiso');
+
+-- Joy = Jackie's twin sister
+call sp_fixname ('Paraiso-MacKenzie, Joy','Paraiso, Joy');
+call sp_fixname ('Paraiso-MacKenzie, Joy','MacKenzie, Joy');
+
+
+-- Not bothering with this one since she retired before marrying?  Should probably fix.
+-- call sp_fixname ('Waselenchuk (Russell), Kim','Russell, Kim');
+-- call sp_fixname ('Waselenchuk (Russell), Kim','Waselenchuk, Kim');
+
+call sp_fixname ('Russell, Kim','Waselenchuk, Kim');
+
+call sp_fixname ('Solis, Samantha Salas','Salas, Samantha');
+
+-- She played before and after marriage, so fix.
+call sp_fixname ('Huczek (Van Hees), Christie','Van Hees, Christie');
+call sp_fixname ('Huczek (Van Hees), Christie','Huczek, Christie');
+call sp_fixname ('Huczek (Van Hees), Christie','Van, Christie');
+call sp_fixname ('Huczek (Van Hees), Christie','Van-Hees, Christie');
+call sp_fixname ('Huczek (Van Hees), Christie','Van-Hees, Christie');
+call sp_fixname ('Huczek (Van Hees), Christie','Van Hess, Kristi');
+call sp_fixname ('Huczek (Van Hees), Christie','Van Hees, Kristi');
+
+call sp_fixname ('Wachtel (Stoffregen), Kerri','Wachtel, Kerri');
+call sp_fixname ('Wachtel (Stoffregen), Kerri','Stoffregen, Kerri');
+call sp_fixname ('Wachtel (Stoffregen), Kerri','Stoffregen Wachtel, Kerri');
+
+call sp_fixname ('Warhftig, Sarah','Warhaftig, Sarah');
+
+call sp_fixname ('Lucas (Wiragh), Michelle','Wiragh, Michelle');
+call sp_fixname ('Lucas (Wiragh), Michelle','Lucas, Michelle');
+
+-- Leaving out maiden name since she retired before marrying
+
+call sp_fixname ('Wright, Shannon','Wright-Hamilton, Shannon');
+
+call sp_fixname ('Ruiz (Roehler), Aimee','Roehler, Aimee');
+call sp_fixname ('Ruiz (Roehler), Aimee','Ruiz, Aimee');
+
+-- Not using her married name; played before got married
+call sp_fixname ('Tisinger, Janel','Take (Tisinger), Janel');
+call sp_fixname ('Tisinger, Janel','Take, Janel');
+
+
+call sp_fixname ('Bellows (Walsh), Kristen','Walsh, Kristen');
+call sp_fixname ('Bellows (Walsh), Kristen','Bellows, Kristen');
+call sp_fixname ('Bellows (Walsh), Kristen','Walsh, Kristin');
+
+
+call sp_fixname ('Gould (Gilman), Michelle','Gould, Michelle');
+call sp_fixname ('Gould (Gilman), Michelle','Gilman, Michelle');
+call sp_fixname ('Gould (Gilman), Michelle','Gilman-Gould, Michelle');
+call sp_fixname ('Gould (Gilman), Michelle','Gilman Gould, Michelle');
+
+-- Not bothering with this one since she retired before marrying?
+-- call sp_fixname ('Conine (Doyle), Cindy','Doyle, Cindy');
+-- call sp_fixname ('Conine (Doyle), Cindy','Doyle, Cindy');
+-- call sp_fixname ('Conine (Doyle), Cindy','Doyle, Cindy');
+
+
+-- Bailey, Malia from  Malia Kamahoahoa Bailey
+call sp_fixname ('Bailey, Malia','Bailey Kamahoahoa, Malia');
+
+call sp_fixname ('Kelly (Fischl), Dottie','Fischl, Dottie');
+call sp_fixname ('Kelly (Fischl), Dottie','Fischl Kelly, Dottie');
+call sp_fixname ('Kelly (Fischl), Dottie','Kelly, Dottie');
+
+
+-- married dec 2014
+call sp_fixname ('Thomas (Irons), Kimberly','Irons, Kimberly');
+call sp_fixname ('Thomas (Irons), Kimberly','Thomas, Kim');
+call sp_fixname ('Thomas (Irons), Kimberly','Irons, Kim');
+call sp_fixname ('Thomas (Irons), Kimberly','Thomas, Kimberly');
+
+-- married Mar2014?
+call sp_fixname ('Soley (Rascon), Sofia','Rascon, Sofia');
+call sp_fixname ('Soley (Rascon), Sofia','Soley, Sofia');
+call sp_fixname ('Soley (Rascon), Sofia','Rason, Sofia');
+
+
+-- married as of mid 2013
+call sp_fixname ('Kirch (OBrien), Aubrey','O''Brien, Aubrey');
+call sp_fixname ('Kirch (OBrien), Aubrey','OBrien, Aubrey');
+call sp_fixname ('Kirch (OBrien), Aubrey','Kirch, Aubrey');
+
+call sp_fixname ('Lee, Young Ock','Lee, Youngock');
+call sp_fixname ('Lee, Young Ock','Youngcock, Lee');
+
+-- Married and then not
+call sp_fixname ('Feaster, Shannon','Feaster-Stewart, Shannon');
+call sp_fixname ('Feaster, Shannon','Feaster Stewart, Shannon');
+call sp_fixname ('Feaster, Shannon','Stewart, Shannon');
+
+
+-- Seemed to go by Jo, not proper Johanna
+call sp_fixname ('Shattuck, Jo','Shattuck, Johanna');
+
+-- Hostovich, Candi: not updating since played before marriage; now is Candi Linkous
+-- call sp_fixname ('Linkous (Hostovich), Candi','Hostovich, Candi');
+-- call sp_fixname ('Linkous (Hostovich), Candi','Linkous, Candi');
+-- call sp_fixname ('Linkous (Hostovich), Candi','Linkous-Hostovich, Candi');
+
+-- somehow kept inserting with the trailing "T." ... removing everywhere.
+call sp_fixname ('Lambert, Frederique','Lambert, Frederique T.');
+
+-- Lots of variations for Kristen Fritz
+
+call sp_fixname ('Jones (Fritz), Kristen','Fritz, Kristen');
+call sp_fixname ('Jones (Fritz), Kristen','Fritz, Kristin');
+call sp_fixname ('Jones (Fritz), Kristen','Junkin, Kristen');
+call sp_fixname ('Jones (Fritz), Kristen','Fritz Junkin, Kristen');
+call sp_fixname ('Jones (Fritz), Kristen','Junkin (Fritz), Kristen');
+call sp_fixname ('Jones (Fritz), Kristen','Junkin Jones, Kristen');
+
+call sp_fixname ('Amaya, Cristina','Amaya, Christina');
+call sp_fixname ('Barriga, Loreto','Barriga, Loreta');
+
+call sp_fixname ('Vargas, Maria Jose','Vargas, Maria');
+call sp_fixname ('Vargas, Maria Jose','Jose Maria, Vargas');
+
+call sp_fixname ('Nunez, Ana Paola','Nunez, Paola');
+call sp_fixname ('Nunez, Ana Paola','Nunez, Ana');
+
+
+-- Keri Allen vs Kerri Allen: went with Kerri
+call sp_fixname ('Allen, Kerri','Allen, Keri');
+
+-- Is this right??
+-- eventually gets married I believe: Dana Sibell-Anderson
+call sp_fixname ('Sibell-Anderson, Dana','Anderson, Dyan');
+call sp_fixname ('Sibell-Anderson, Dana','Anderson, Dana');
+
+
+
+call sp_fixname ('Andrade, Claudia','Andrade, Claudio');
+
+-- Seen this three different ways: Alissa, Alyssa, Elissa.  Going with Elissa but coudl be wrong
+call sp_fixname ('Beltranena, Elissa','Beltranena, Alissa');
+call sp_fixname ('Beltranena, Elissa','Beltranena, Alyssa');
+
+call sp_fixname ('Jacobson-Prentice, Brandi','Jacobson, Brandi');
+call sp_fixname ('Jacobson-Prentice, Brandi','Jacobson Prentice, Brandi');
+call sp_fixname ('Jacobson-Prentice, Brandi','Prentice, Brandi');
+call sp_fixname ('Jacobson-Prentice, Brandi','prentice, Brandi Jacobson');
+
+call sp_fixname ('Bevelock, Toni','Bevelock, Tony');
+
+call sp_fixname ('Boyea, Sherron','Boyea, Sharron');
+
+call sp_fixname ('Brodeur, Genevieve','Brodeur, Genevive');
+
+call sp_fixname ('Brodeur, Genevieve','Brodeur,Genevieve Ste-Rosalie');
+
+-- Nee  Tammy Rae Brockbank
+-- married as Brown, since divorced and now Tammy Brockbank Uriguen; Tammy Brockbank-Uriguen
+-- going with older married name since retired before remarried
+
+call sp_fixname ('Brown (Brockbank), Tammy','Brown, Tamy');
+call sp_fixname ('Brown (Brockbank), Tammy','Brockbank Brown, Tammy');
+call sp_fixname ('Brown (Brockbank), Tammy','Brockbank, Tammy');
+call sp_fixname ('Brown (Brockbank), Tammy','Brown, Tammy');
+
+
+
+
+
+
+call sp_fixname ('Carbajal, Jessie','Carbajal, Jesse');
+
+call sp_fixname ('Cardoza, Paola','Cardozo, Paola');
+
+call sp_fixname ('Orozco, Cecilia','Cecilia Orozco');
+
+call sp_fixname ('Collins, Wanda','Colins, Wanda');
+
+call sp_fixname ('Csuk, Krystal','Csuk, Crystal');
+call sp_fixname ('Csuk, Krystal','Czuk, Krystal');
+
+call sp_fixname ('Daza, Jenny','Daza Navia Jenny');
+
+call sp_fixname ('Deutsch, Lauren','Deutsch. Lauren');
+
+call sp_fixname ('Acquilar, Diana','Diana Acquilar');
+call sp_fixname ('Acquilar, Diana','Aguilar, Diana');
+
+call sp_fixname ('Holtslander, Khanh','Holtslander, Khahn');
+
+call sp_fixname ('Saunders, Jennifer','Jennifer Saunders');
+
+call sp_fixname ('Gremley, Kelly','Kelly Gremley');
+
+call sp_fixname ('Kwon, Marie Malhee','Kwon, Mahlee');
+
+call sp_fixname ('Luque, Carolina','Luque Carolina');
+call sp_fixname ('Luque, Carolina','Carolina Luque');
+
+call sp_fixname ('Maldonado, Anita','Maldonaldo, Anita');
+
+call sp_fixname ('Maldonado, Jessica','Maldonaldo, Jessica');
+
+call sp_fixname ('DelliSanti, Maria','Maria DelliSanti');
+call sp_fixname ('DelliSanti, Maria','Delli-Santi, Maria');
+
+call sp_fixname ('McElfresh, Melissa','McElfrish, Melissa');
+
+call sp_fixname ('Molina, Daniela','Molina, Damiela');
+
+call sp_fixname ('Morton, Karen','Mortom, Karon');
+
+call sp_fixname ('Orozco, Cecilia','Orozco,  Cecilia');
+
+call sp_fixname ('Parades Guillen, Islhey','Parades Guillen,');
+
+call sp_fixname ('Parades Guillen, Islhey','Parades, Islhey');
+
+call sp_fixname ('Munoz, Maria Paz','Paz Munoz, Maria');
+
+call sp_fixname ('Rivera, Joanna','Rivera, Jhoana');
+
+call sp_fixname ('Rivera, Joanna','Rivera, Johanna');
+
+call sp_fixname ('Rodriguez, Maria Renee','Rodriguez, Maria');
+
+call sp_fixname ('Sato, Maiko','Satou, Maiko');
+
+call sp_fixname ('Schlichemeyer, Alison','Schlichemeyer, Allison');
+
+call sp_fixname ('Trachsel, Jamie','Trachsel. Jamie');
+
+call sp_fixname ('Turgeon, Chantal','Turgeon, Shantal');
+
+call sp_fixname ('Washington, Genevieve','Washington, Ginny');
+
+call sp_fixname ('Ackermann, Krystal','Ackerman, Krystal');
+
+call sp_fixname ('Aldrede, Luisa','Aldrete, Luisa');
+
+-- Maybe?  Aquiano, Tonya and Anguiano, Tania?
+
+call sp_fixname ('Blaakman, Alicia','Blaakman, Ali');
+
+call sp_fixname ('Brewer, Amie','Brewer, Aime');
+
+-- Should we standardize on Fran or Francine Davis?
+call sp_fixname ('Davis, Fran','Davis, Francine');
+call sp_fixname ('Davis, Fran','Davis, Fransine');
+
+call sp_fixname ('Drury, Danielle','Drury, Daniele');
+
+call sp_fixname ('Ferina, Kimberly','Ferina, Kimi');
+call sp_fixname ('Ferina, Kimberly','Ferina, Kim');
+
+call sp_fixname ('Friedman, Randy','Freidman, Randi');
+call sp_fixname ('Friedman, Randy','Freidman, Randy');
+call sp_fixname ('Friedman, Randy','Freidman, Randi');
+
+
+call sp_fixname ('Gluvna-Isett, Kathy','Glavine-iset, Kathy');
+
+call sp_fixname ('Guzman Velgis, Eleni','Guzman, Eleni');
+call sp_fixname ('Guzman Velgis, Eleni','Guzman, Eleny');
+
+call sp_fixname ('Hamilton, Karina','Hamilton, karina');
+
+call sp_fixname ('Herrera, Alexandra','Herrera, Alexandria');
+
+-- Guessing on this last name as being with an i not an e.
+call sp_fixname ('Hettisheimer, Holly','Hettesheimer, Holly');
+
+call sp_fixname ('Kreigler, Carol','Krieger, Carol');
+
+-- Should we put in her maiden Salazar?
+call sp_fixname ('Leveque (Salazar), Cintya','Leveque, Cintya');
+call sp_fixname ('Leveque (Salazar), Cintya','Leveque Salazar, Cintya');
+call sp_fixname ('Leveque (Salazar), Cintya','Salazar-Leveque, Cinyta');
+
+call sp_fixname ('Marriott, Janell','Marriott, Janel');
+
+call sp_fixname ('Martinez, Gabriela','Martinez, Gabriella');
+
+call sp_fixname ('Morissette, Michele','Morisette, Michelle');
+
+call sp_fixname ('Noda, Etsuko','Noda, Estuko');
+
+call sp_fixname ('Noller, Cristie','Noller, Christee');
+
+call sp_fixname ('Odegard, Karina','Odegaard, Karina');
+
+call sp_fixname ('Parrilla, Jessica','Parilla, Jessica');
+
+call sp_fixname ('Perez, Montserrat','Perez, Montse');
+
+call sp_fixname ('Perrin, Robyn','Perrin, Robin');
+call sp_fixname ('Perrin, Robyn','Perren, Robin');
+call sp_fixname ('Perrin, Robyn','Perren, Robyn');
+
+call sp_fixname ('Pratt, Cecilia','Pratt, Ceci');
+
+call sp_fixname ('Rehling, Roxanne','Rehling, Rozanne');
+
+-- What was Holly Remen's maiden name?  Was it Gray?  I believe so; leave it Gray?
+-- call sp_fixname ('Remen (Gray), Holly','Gray, Holly');
+
+
+
+-- Is Rivera, Anna == Rivera, Ana Kristin ? 
+
+
+
+call sp_fixname ('Saunders, Jennifer','Saunders, Jen');
+
+-- Leaving out maiden name since she retired before marrying
+call sp_fixname ('Walton, Karin','Walton-Trent, Karin');
+
+call sp_fixname ('Kubany, Sandy','Kubany, Sandra');
+
+call sp_fixname ('Crawford, Ellen','Crawford, Elaine');
+
+call sp_fixname ('Sanders, Lourdes','Sanders Garcia, Lourdes');
+call sp_fixname ('Sanders, Lourdes','Sanders, Lourdes Garcia');
+
+call sp_fixname ('Foster, Amy','Foster, Amy Kilbane');
+call sp_fixname ('Foster, Amy','Kilbane Foster, Amy');
+
+call sp_fixname ('Powell, Lori-Jane','Powell, L.J.');
+call sp_fixname ('Powell, Lori-Jane','Powell, Lori');
+
+call sp_fixname ('Dunn (MacDonald), Amanda','Dunn, Amanda MacDonald');
+call sp_fixname ('Dunn (MacDonald), Amanda','MacDonald, Amanda');
+call sp_fixname ('Dunn (MacDonald), Amanda','Dunn (MacDonald)');
+
+call sp_fixname ('Lynch, Marcy','Lynch, Marci');
+
+call sp_fixname ('Coburn, Lynne','Coburne, Lynne');
+call sp_fixname ('Coburn, Lynne','Coburn, Lynn');
+
+call sp_fixname ('Torres, Rosy','Torres, Rosie');
+
+call sp_fixname ('Ferriera-Worth, Dee','Worth, Dee');
+call sp_fixname ('Ferriera-Worth, Dee','Ferriera, Dee');
+call sp_fixname ('Ferriera-Worth, Dee','Ferriera-Worth');
+
+call sp_fixname ('Aguilar, Vicki','Aquilar, Vicki');
+
+-- New name for Cathy Nichols
+call sp_fixname ('Nichols, Cathy','Nichols-dickinson, Catherine');
+call sp_fixname ('Nichols, Cathy','Nichols, Catherine');
+call sp_fixname ('Nichols, Cathy','Nichols-Dickinson, Catherine');	
+call sp_fixname ('Nichols, Cathy','Nichols Dickinson, Catherine');	
+
+call sp_fixname ('Vonondarza, Ramona','Von Ondarza, Ramona');	
+
+call sp_fixname ('Flores Segovia, Anakaren','Segovia, Anakaren Flores');	
+
+call sp_fixname ('Gonzalez, Andrea Martinez','Martinez, Andrea');	
+
+call sp_fixname ('Guzman Velgis, Eleni','Velgis, Eleni Guzman');	
+
+call sp_fixname ('Del Granado Revollo, Gabriela','Revollo, Gabriela');	
+
+call sp_fixname ('Gordon, Mariana Tobon','Tobon, Marianna');	
+call sp_fixname ('Gordon, Mariana Tobon','Tobon, Mariana');	
+
+-- now Michelle De La Rosa.  
+call sp_fixname ('Key, Michelle','Ke, Michelle');	
+
+
+
+
+
+commit;
+
+
+select distinct winner as name from results union
+select distinct loser as name from results union
+select distinct player from rankings union
+select distinct player from seedings union
+select player from player_profile
+order by 1;

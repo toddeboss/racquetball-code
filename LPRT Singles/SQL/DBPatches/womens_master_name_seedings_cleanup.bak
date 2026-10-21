@@ -1,0 +1,301 @@
+/* 
+filename: Womens_master_name_seedings_cleanup.sql
+purpose: SQL to clean up the womens names in seedings
+
+modification history
+when	who	what
+12/1/16	tboss	creation, adapted from master results names cleanup.
+12/8/16: tboss	putting all name cleanup commands in ONE place.  Results, rankings, seedings, player_profile.
+
+
+Usage: n/a: one-off working commands used to fix certain things in databases
+
+Prerequisites to run: none
+
+Other notes: none
+
+*/
+
+
+-- LPRT master name cleanup
+
+use cp30725_women;
+
+SET SQL_SAFE_UPDATES = 0;
+
+create table seedings_prenamecleanup_20161202 as select * from seedings;
+
+
+----
+
+
+
+update seedings set player='Carpio, Ivonne' where player='Carplo, Jvonne';
+
+update seedings set player='Haynes (Fisher), Adrienne' where player='Fisher, Adrienne';
+
+update seedings set player='Haynes (Fisher), Adrienne' where player='Haynes, Adrienne';
+
+update seedings set player='Drexler (Greer), Marci' where player='Greer, Marci';
+
+update seedings set player='Drexler (Greer), Marci' where player='Drexler, Marci';
+
+update seedings set player='Gudinas, Cheryl' where player='Gudinas Holmes, Cheryl';
+
+update seedings set player='Gudinas, Cheryl' where player='Gudinas-Holmes, Cheryl';
+
+update seedings set player='Guillemette, Veronique' where player='Guillemette, Vernoique';
+
+update seedings set player='Kwon, Marie Malhee' where player='Kwon, Malhee';
+
+update seedings set player='Loredo, Arantza' where player='Lored, Arantza';
+
+update seedings set player='Pimentelli, Devon' where player='Pinentelli, Devon';
+
+
+update seedings set player='Paraiso, Jackie' where player='Paraiso-Gibson, Jackie';
+
+update seedings set player='Paraiso, Jackie' where player='Gibson, Jackie';
+
+update seedings set player='Paraiso, Jackie' where player='Rice, Jackie';
+
+update seedings set player='Paraiso, Jackie' where player='Paraiso Rice, Jackie';
+
+update seedings set player='Paraiso, Jackie' where player='Paraiso-Rice, Jackie';
+
+update seedings set player='Paraiso, Jackie' where player='Rice, Jackie Paraiso';
+
+
+
+
+
+-- Not bothering with this one since she retired before marrying?  Should probably fix.
+-- update seedings set player='Waselenchuk (Russell), Kim' where player='Russell, Kim';
+-- update seedings set player='Waselenchuk (Russell), Kim' where player='Waselenchuk, Kim';
+
+update seedings set player='Russell, Kim' where player='Waselenchuk, Kim';
+
+update seedings set player='Solis, Samantha Salas' where player='Salas, Samantha';
+
+
+-- She played before and after marriage, so fix.
+-- update seedings set player='Van Hees, Christie' where player='Huczek, Christie';
+
+update seedings set player='Huczek (Van Hees), Christie' where player='Van Hees, Christie';
+update seedings set player='Huczek (Van Hees), Christie' where player='Huczek, Christie';
+update seedings set player='Huczek (Van Hees), Christie' where player='Van Hees, Christie';
+
+
+
+update seedings set player='Van Hees, Christie' where player='Van, Christie';
+
+update seedings set player='Van Hees, Christie' where player='Van-Hees, Christie';
+
+update seedings set player='Wachtel (Stoffregen), Kerri' where player='Wachtel, Kerri';
+
+update seedings set player='Wachtel (Stoffregen), Kerri' where player='Stoffregen, Kerri';
+
+update seedings set player='Warhftig, Sarah' where player='Warhaftig, Sarah';
+
+
+update seedings set player='Lucas (Wiragh), Michelle' where player='Wiragh, Michelle';
+
+update seedings set player='Lucas (Wiragh), Michelle' where player='Lucas, Michelle';
+
+update seedings set player='Wright-Hamilton, Shannon' where player='Wright, Shannon';
+
+update seedings set player='Ruiz (Roehler), Aimee' where player='Roehler, Aimee';
+
+update seedings set player='Ruiz (Roehler), Aimee' where player='Ruiz, Aimee';
+
+update seedings set player='Take (Tisinger), Janel' where player='Tisinger, Janel';
+
+update seedings set player='Bellows (Walsh), Kristen' where player='Walsh, Kristen';
+
+update seedings set player='Bellows (Walsh), Kristen' where player='Bellows, Kristen';
+
+update seedings set player='Bellows (Walsh), Kristen' where player='Walsh, Kristin';
+
+
+
+update seedings set player='Gould (Gilman), Michelle' where player='Gould, Michelle';
+
+update seedings set player='Gould (Gilman), Michelle' where player='Gilman, Michelle';
+
+update seedings set player='Gould (Gilman), Michelle' where player='Gilman-Gould, Michelle';
+
+update seedings set player='Gould (Gilman), Michelle' where player='Gilman Gould, Michelle';
+
+-- Not bothering with this one since she retired before marrying?
+-- update seedings set player='Conine (Doyle), Cindy' where player='Doyle, Cindy';
+
+-- Bailey, Malia from  Malia Kamahoahoa Bailey
+update seedings set player='Bailey, Malia' where player='Bailey Kamahoahoa, Malia';
+
+update seedings set player='Kelly (Fischl), Dottie' where player='Fischl, Dottie';
+
+update seedings set player='Kelly (Fischl), Dottie' where player='Fischl Kelly, Dottie';
+
+update seedings set player='Kelly (Fischl), Dottie' where player='Kelly, Dottie';
+
+-- married dec 2014
+update seedings set player='Thomas (Irons), Kimberly' where player='Irons, Kimberly';
+
+-- married Mar2014?
+update seedings set player='Soley (Rascon), Sofia' where player='Rascon, Sofia';
+
+update seedings set player='Soley (Rascon), Sofia' where player='Soley, Sofia';
+
+
+-- married as of mid 2013
+update seedings set player='Kirch (OBrien), Aubrey' where player='O''Brien, Aubrey';
+
+update seedings set player='Kirch (OBrien), Aubrey' where player='OBrien, Aubrey';
+
+update seedings set player='Kirch (OBrien), Aubrey' where player='Kirch, Aubrey';
+
+
+update seedings set player='Lee, Young Ock' where player='Lee, Youngock';
+
+update seedings set player='Lee, Young Ock' where player='Youngcock, Lee';
+
+
+update seedings set player='Feaster, Shannon' where player='Feaster-Stewart, Shannon';
+
+update seedings set player='Shattuck, Jo' where player='Shattuck, Johanna';
+
+-- Hostovich, Candi: not updating since played before marriage; now is Candi Linkous
+
+update seedings set player='Lambert, Frederique' where player='Lambert, Frederique T.';
+
+
+-- Lots of variations for Kristen Fritz
+
+update seedings set player='Jones (Fritz), Kristen' where player='Fritz, Kristen';
+
+update seedings set player='Jones (Fritz), Kristen' where player='Junkin, Kristen';
+
+update seedings set player='Jones (Fritz), Kristen' where player='Fritz Junkin, Kristen';
+
+update seedings set player='Jones (Fritz), Kristen' where player='Junkin (Fritz), Kristen';
+
+update seedings set player='Jones (Fritz), Kristen' where player='Junkin Jones, Kristen';
+
+
+update seedings set player='Amaya, Cristina' where player='Amaya, Christina';
+
+update seedings set player='Barriga, Loreto' where player='Barriga, Loreta';
+
+update seedings set player='Vargas, Maria Jose' where player='Vargas, Maria';
+
+update seedings set player='Vargas, Maria Jose' where player='Jose Maria, Vargas';
+
+update seedings set player='Vargas, Maria Jose' where player='Jose Maria, Vargas';
+
+
+update seedings set player='Nunez, Ana Paola' where player='Nunez, Paola';
+
+update seedings set player='Nunez, Ana Paola' where player='Nunez, Ana';
+
+
+-- Keri Allen vs Kerri Allen: went iwth Kerri
+update seedings set player='Allen, Kerri' where player='Allen, Keri';
+
+update seedings set player='Anderson, Dana' where player='Anderson, Dyan';
+
+update seedings set player='Andrade, Claudia' where player='Andrade, Claudio';
+
+update seedings set player='Beltranena, Elissa' where player='Beltranena, Alissa';
+
+
+-- run from here; below here are NOT in master results database
+update seedings set player='Bevelock, Toni' where player='Bevelock, Tony';
+
+update seedings set player='Boyea, Sherron' where player='Boyea, Sharron';
+
+update seedings set player='Brodeur, Genevieve' where player='Brodeur, Genevive';
+
+update seedings set player='Brodeur, Genevieve' where player='Brodeur,Genevieve Ste-Rosalie';
+
+update seedings set player='Brown, Tammy' where player='Brown, Tamy';
+
+update seedings set player='Carbajal, Jessie' where player='Carbajal, Jesse';
+
+update seedings set player='Cardoza, Paola' where player='Cardozo, Paola';
+
+update seedings set player='Orozco, Cecilia' where player='Cecilia Orozco';
+
+update seedings set player='Collins, Wanda' where player='Colins, Wanda';
+
+update seedings set player='Csuk, Krystal' where player='Csuk, Crystal';
+
+update seedings set player='Daza, Jenny' where player='Daza Navia Jenny';
+
+update seedings set player='Deutsch, Lauren' where player='Deutsch. Lauren';
+
+update seedings set player='Acquilar, Diana' where player='Diana Acquilar';
+
+update seedings set player='Haynes (Fisher), Adrienne' where player='Fisher Haynes, Adrienne';
+
+update seedings set player='Holtslander, Khanh' where player='Holtslander, Khahn';
+
+update seedings set player='Jacobson-Prentice, Brandi' where player='Jacobson, Brandi';
+
+update seedings set player='Saunders, Jennifer' where player='Jennifer Saunders';
+
+update seedings set player='Gremley, Kelly' where player='Kelly Gremley';
+
+update seedings set player='Kwon, Marie Malhee' where player='Kwon, Mahlee';
+
+update seedings set player='Luque, Carolina' where player='Luque Carolina';
+
+update seedings set player='Maldonado, Anita' where player='Maldonaldo, Anita';
+
+update seedings set player='Maldonado, Jessica' where player='Maldonaldo, Jessica';
+
+update seedings set player='DelliSanti, Maria' where player='Maria DelliSanti';
+
+update seedings set player='McElfresh, Melissa' where player='McElfrish, Melissa';
+
+update seedings set player='Molina, Daniela' where player='Molina, Damiela';
+
+update seedings set player='Morton, Karen' where player='Mortom, Karon';
+
+update seedings set player='Orozco, Cecilia' where player='Orozco,  Cecilia';
+
+update seedings set player='Parades Guillen, Islhey' where player='Parades Guillen,';
+
+update seedings set player='Parades Guillen, Islhey' where player='Parades, Islhey';
+
+update seedings set player='Munoz, Maria Paz' where player='Paz Munoz, Maria';
+
+update seedings set player='Soley (Rascon), Sofia' where player='Rason, Sofia';
+
+update seedings set player='Rivera, Joanna' where player='Rivera, Jhoana';
+
+update seedings set player='Rivera, Joanna' where player='Rivera, Johanna';
+
+update seedings set player='Rodriguez, Maria Renee' where player='Rodriguez, Maria';
+
+update seedings set player='Sato, Maiko' where player='Satou, Maiko';
+
+update seedings set player='Schlichemeyer, Alison' where player='Schlichemeyer, Allison';
+
+update seedings set player='Thomas (Irons), Kimberly' where player='Thomas, Kim';
+
+update seedings set player='Trachsel, Jamie' where player='Trachsel. Jamie';
+
+update seedings set player='Turgeon, Chantal' where player='Turgeon, Shantal';
+
+update seedings set player='Washington, Genevieve' where player='Washington, Ginny';
+
+
+
+
+
+commit;
+
+
+
+
+
