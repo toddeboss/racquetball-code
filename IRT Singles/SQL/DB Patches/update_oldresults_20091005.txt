@@ -1,0 +1,6 @@
+IRT missing tournament fixing.
+
+- fixed 8/9/1998 Summer Cooler event; was through quarters w/ no scores, now
+complete through round of 32 with all scores.
+
+- Input the 2/21/1999 Boston Foxwoods pro am
