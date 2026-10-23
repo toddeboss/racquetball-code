@@ -1,0 +1,13 @@
+-- Process for setting up doubles
+
+results_doubles
+results_doubles_staging
+
+seedings_doubles
+seedings_doubles_staging
+
+tourneys_doubles
+
+wins_doubles
+
+partner_wl_rpt

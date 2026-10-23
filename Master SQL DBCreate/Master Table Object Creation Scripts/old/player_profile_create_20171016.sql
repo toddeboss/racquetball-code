@@ -1,0 +1,145 @@
+/* 11/3/08: player_profile table
+12/5/16: updated with new data.
+
+12/5/16: added home country
+
+10/16/17: went to master player profile, added gender
+
+ */
+
+
+use cp30725_wrt;
+
+SET SQL_SAFE_UPDATES = 0;
+
+desc results;
+
+drop table player_profile;
+
+create table player_profile
+( player varchar(50),
+ gender varchar(1),
+ total_wins integer,
+ tourney_wins integer,
+ country varchar(100),
+ hometown varchar(100),
+ current_residence varchar(100),
+ height varchar(10),
+ weight varchar(4),
+ college varchar(50),
+ sponsor varchar(50),
+ dob varchar(10),
+ l_r_flag varchar(1),
+ current_age integer,
+ notes varchar(255),
+ tmp_dob date);
+ 
+ 
+select * from player_profile;
+
+create table player_profile_20161205a as select * from player_profile;
+
+truncate table player_profile;
+
+
+#load data local infile 'D:/Dropbox/z rball/IRT/player_profile.csv' into table player_profile
+#fields terminated by ',' enclosed by '"' lines terminated by '\n';
+
+load data local infile 'C:/Users/tboss/Dropbox/z IT/incoming/rball/master_player_profile.csv' into table player_profile
+fields terminated by ',' enclosed by '"' lines terminated by '\n';
+
+
+
+delete from player_profile where player='Player';
+
+delete from player_profile where player is null;
+
+delete from player_profile where tourney_wins is null;
+
+delete from player_profile where player='';
+
+update player_profile set tmp_dob=STR_TO_DATE(dob, '%m/%d/%Y');
+
+
+commit;
+
+
+select * from player_profile;
+
+
+create table players_all (player varchar(50));
+
+insert into players_all
+select distinct winner as name from results 
+union 
+select distinct loser as name from results order by name;
+
+select * from players_all;
+
+
+create table players_all (player varchar(50));
+
+insert into players_all
+select distinct winner as name from results 
+union 
+select distinct loser as name from results order by name;
+
+select * from players_all;
+
+
+
+
+/*****************************************************/
+-- here down is just diagnosis code used to make report.
+
+
+select * from player_profile where dob='';
+
+select * from player_profile order by tourney_wins desc, total_wins desc;
+
+select player,l_r_flag,hometown,current_residence,height,weight,college,sponsor,dob,tmp_dob from player_profile order by player asc;
+
+select distinct dob from player_profile where dob <> '' order by dob;
+
+select distinct(winner) from results where round=2;
+
+-- first appearances
+select dob, (select min(tmp_date) from results where loser='Swain, Cliff') as first_app from player_profile where player='Swain, Cliff';
+select dob, (select min(tmp_date) from results where loser='Waselenchuk, Kane') as first_app from player_profile where player='Waselenchuk, Kane';
+select dob, (select min(tmp_date) from results where loser='Monchik, Sudsy') as first_app from player_profile where player='Monchik, Sudsy';
+select dob, (select min(tmp_date) from results where loser='Hogan, Marty') as first_app from player_profile where player='Hogan, Marty';
+select dob, (select min(tmp_date) from results where loser='Harnett, Brett') as first_app from player_profile where player='Harnett, Brett';
+
+-- first tour win
+select dob, (select min(tmp_date) from results where winner='Swain, Cliff' and round=2) as first_win from player_profile where player='Swain, Cliff';
+select dob, (select min(tmp_date) from results where winner='Waselenchuk, Kane' and round=2) as first_win from player_profile where player='Waselenchuk, Kane';
+select dob, (select min(tmp_date) from results where winner='Monchik, Sudsy' and round=2) as first_win from player_profile where player='Monchik, Sudsy';
+select dob, (select min(tmp_date) from results where winner='Hogan, Marty' and round=2) as first_win from player_profile where player='Hogan, Marty';
+select dob, (select min(tmp_date) from results where winner='Harnett, Brett' and round=2) as first_win from player_profile where player='Harnett, Brett';
+select dob, (select min(tmp_date) from results where winner='Mannino, Jason' and round=2) as first_win from player_profile where player='Mannino, Jason';
+select dob, (select min(tmp_date) from results where winner='Huczek, Jack' and round=2) as first_win from player_profile where player='Huczek, Jack';
+
+-- this works in oracle
+select to_date('9/1/1983') - to_date('3/21/1966') from dual;
+
+select to_days('1983-01-01') - to_days('1966-03-21') from dual;
+
+select to_days(sysdate()) from dual
+
+select sysdate() from dual;
+
+select to_days(sysdate()) - to_days('1957-01-01') from dual;
+
+
+select max(date) from 
+(select max(tmp_date) from results where loser='Waselenchuk, Kane'
+union
+select max(tmp_date) from results where winner='Waselenchuk, Kane' and round=2)
+
+
+
+
+
+select * from player_profile;
+
+update player_profile set current_age=null where current_age=109;

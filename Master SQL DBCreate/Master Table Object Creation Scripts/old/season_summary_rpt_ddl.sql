@@ -1,0 +1,12 @@
+CREATE TABLE `season_summary_rpt` (
+  `player` varchar(50) DEFAULT NULL,
+  `wins` int(11) DEFAULT NULL,
+  `finals` int(11) DEFAULT NULL,
+  `semis` int(11) DEFAULT NULL,
+  `quarters` int(11) DEFAULT NULL,
+  `sixteens` int(11) DEFAULT NULL,
+  `thirtytwos` int(11) DEFAULT NULL,
+  `sixtyfours` int(11) DEFAULT NULL,
+  `onetwentyeights` int(11) DEFAULT NULL,
+  `twofiftysixes` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;

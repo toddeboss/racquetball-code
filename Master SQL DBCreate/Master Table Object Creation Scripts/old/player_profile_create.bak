@@ -1,0 +1,32 @@
+/* 11/3/08: player_profile table
+12/5/16: updated with new data.
+
+12/5/16: added home country
+10/12/17: deployed to IRF
+
+ */
+
+
+use cp30725_irf;
+
+
+drop table player_profile;
+
+create table player_profile
+( player varchar(50),
+ total_wins integer,
+ tourney_wins integer,
+ country varchar(100),
+ hometown varchar(100),
+ current_residence varchar(100),
+ height varchar(10),
+ weight varchar(4),
+ college varchar(50),
+ sponsor varchar(50),
+ dob varchar(10),
+ l_r_flag varchar(1),
+ current_age integer,
+ notes varchar(255),
+ tmp_dob date);
+ 
+--- need to adapt the rest of the creation steps from other files.

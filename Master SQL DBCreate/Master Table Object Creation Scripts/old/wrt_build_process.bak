@@ -1,0 +1,22 @@
+To stand up a new Rball database:
+
+(some of these are created and saved anew, others just run from IRT dirs)
+
+Create these tables:
+- banner
+- missed_tourney_rpt
+- player_profile
+- rankings
+- rankings_source
+- results
+- results_staging
+- season_summary_rpt
+- seedings
+- seedings_staging
+- tour_champions
+- tourneys
+- wins
+
+
+
+
