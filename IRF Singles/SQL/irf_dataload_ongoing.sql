@@ -31,7 +31,7 @@ create table tourneys_20260403 as select * from tourneys;
 create table seedings_20260403 as select * from seedings;
 
 
-load data local infile 'c:/Dropbox/z IT/temp/irf_2026_parc_singles.csv' into table results_staging
+load data local infile 'c:/Dropbox/z IT/temp/irf_2026_worlds_singles.csv' into table results_staging
 fields terminated by ',' enclosed by '"' lines terminated by '\n';
 
 -- load data local infile 'C:/Users/tboss/Dropbox/z IT/incoming/rball/backup copies/irf_20102012results.csv' into table results_staging
@@ -120,19 +120,18 @@ select distinct city,event,date,tmp_date,season,'N' from results_staging;
 
 SET SQL_SAFE_UPDATES = 0;
 
-
 select * from tourneys order by tmp_date desc;
 
 update tourneys set preview_url='https://blog.proracquetballstats.com/index.php/2023/04/04/irf-2023-parc-knockout-stage-preview/'
 where event like '2023 Pan American%';
 
-update tourneys set wrapup_url='https://blog.proracquetballstats.com/index.php/2023/06/30/irf-central-american-caribbean-championships-wrap-up/'
-where event like '2023 Central American Caribbean Games%';
+update tourneys set wrapup_url='https://blog.proracquetballstats.com/index.php/2026/10/23/2026-23rd-annual-irf-world-championships-individual-events-recap/'
+where event like '2026 XXIII IRF World Championships%';
 
 -------------------------------------------------------------
 -- now seeding
 
-load data local infile 'c:/Dropbox/z IT/temp/irf_2026_parc_singles_seeding.csv' into table seedings_staging
+load data local infile 'c:/Dropbox/z IT/temp/irf_2026_worlds_singles_seeding.csv' into table seedings_staging
 fields terminated by ',' enclosed by '"' lines terminated by '\r\n';
 
 
@@ -155,13 +154,9 @@ commit;
 
 
 delete from banner;
-insert into banner values ('Update to 2026 PARC event in Guatemala City','4/3/26');
+insert into banner values ('Update to 2026 Worlds','10/23/26');
 commit;
 
 
 -- now post to meetandplay, twitter
-
-St. Louis IRT #racquetball event entered into database; @KingKaneRB over @RockyCarsonRB in 3-gam final win.  http://proracquetballstats.com .
-
-IRT database archive results; found full 128 on archive.org for 1998 US Open and uploaded with 
 

@@ -29,7 +29,7 @@ create table tourneys_doubles_20260403 as select * from tourneys_doubles;
 create table seedings_doubles_20260403 as select * from seedings_doubles;
 
 
-load data local infile 'c:/Dropbox/z IT/temp/irf_2026_parc_doubles.csv' into table results_doubles_staging
+load data local infile 'c:/Dropbox/z IT/temp/irf_2026_worlds_doubles.csv' into table results_doubles_staging
 fields terminated by ',' enclosed by '"' lines terminated by '\n';
 
 -- load data local infile 'E:/Dropbox/z rball/IRF Doubles/IRF_doubles_results.csv' into table results_doubles_staging
@@ -130,7 +130,7 @@ select distinct city,event,date,tmp_date,season,'N' from results_doubles_staging
 
 
 
-load data local infile 'c:/Dropbox/z IT/temp/irf_2026_parc_doubles_seeding.csv' into table seedings_doubles_staging
+load data local infile 'c:/Dropbox/z IT/temp/irf_2026_sa_doubles_seeding.csv' into table seedings_doubles_staging
 fields terminated by ',' enclosed by '"' lines terminated by '\r\n';
 
 -- load data local infile 'E:/Dropbox/z rball/IRF Doubles/IRF_doubles_seedings.csv' into table seedings_doubles_staging
