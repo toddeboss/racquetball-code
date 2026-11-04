@@ -1,0 +1,111 @@
+select * from rankings order by season desc, rank asc;
+
+create table rankings_20170622 as select * from rankings;
+
+select * from rankings where season='2016-17' order by rank;
+
+delete from rankings where season='2015-16';
+
+insert into rankings (season, rank, player, points) values ('2016-17','1','Longoria, Paola',2538.00);
+insert into rankings (season, rank, player, points) values ('2016-17','2','Lambert, Frederique',1445.50);
+insert into rankings (season, rank, player, points) values ('2016-17','3','Salas, Samantha',1065.00);
+insert into rankings (season, rank, player, points) values ('2016-17','4','Parilla, Jessica',983.00);
+insert into rankings (season, rank, player, points) values ('2016-17','5','Herrera, Alexandra',895.seok);
+insert into rankings (season, rank, player, points) values ('2016-17','6','Rajsich, Rhonda',725.00);
+insert into rankings (season, rank, player, points) values ('2016-17','7','Amaya, Cristina',720.50);
+insert into rankings (season, rank, player, points) values ('2016-17','8','Munoz, Carla',498.25);
+insert into rankings (season, rank, player, points) values ('2016-17','9','Acosta-Mendoza, Susy',437.75);
+insert into rankings (season, rank, player, points) values ('2016-17','10','Riveros, Adriana',393.25);
+insert into rankings (season, rank, player, points) values ('2016-17','11','Fisher Haynes, Adrienne',356.75);
+insert into rankings (season, rank, player, points) values ('2016-17','12','Mendez, Natalia',356.00);
+insert into rankings (season, rank, player, points) values ('2016-17','13','Mejia, Monserrat',297.00);
+insert into rankings (season, rank, player, points) values ('2016-17','14','Martinez, Gabriella',204.00);
+insert into rankings (season, rank, player, points) values ('2016-17','15','Maldonado, Jessica',168.00);
+insert into rankings (season, rank, player, points) values ('2016-17','16','Pratt, Ceci',166.75);
+insert into rankings (season, rank, player, points) values ('2016-17','17','Guzman Velgis, Eleni',154.50);
+insert into rankings (season, rank, player, points) values ('2016-17','18','Nancy Enriquez',152.50);
+insert into rankings (season, rank, player, points) values ('2016-17','19','Lotts, Sheryl',143.50);
+insert into rankings (season, rank, player, points) values ('2016-17','20','Rodriguez, Maria Renee',132.25);
+insert into rankings (season, rank, player, points) values ('2016-17','21','Flores, Ana Laura',131.00);
+insert into rankings (season, rank, player, points) values ('2016-17','22','Brandt, Laura',118.75);
+insert into rankings (season, rank, player, points) values ('2016-17','22','Scott, Hollie',118.75);
+insert into rankings (season, rank, player, points) values ('2016-17','24','Key, Michelle',117.50);
+insert into rankings (season, rank, player, points) values ('2016-17','25','Simmons, Samantha',117.38);
+insert into rankings (season, rank, player, points) values ('2016-17','26','Rivera, Erin',115.75);
+insert into rankings (season, rank, player, points) values ('2016-17','27','Perez, Montse',111.38);
+insert into rankings (season, rank, player, points) values ('2016-17','28','Carolina Rivera',111.00);
+insert into rankings (season, rank, player, points) values ('2016-17','29','Cooperrider, Jordan',104.00);
+insert into rankings (season, rank, player, points) values ('2016-17','30','Rascon, Sofia',101.75);
+insert into rankings (season, rank, player, points) values ('2016-17','31','Davis, Damonique',98.50);
+insert into rankings (season, rank, player, points) values ('2016-17','32','Bailey, Kelani',89.50);
+insert into rankings (season, rank, player, points) values ('2016-17','33','Maldonado, Denisse',80.75);
+insert into rankings (season, rank, player, points) values ('2016-17','34','Franco, Maritza',75.25);
+insert into rankings (season, rank, player, points) values ('2016-17','35','Sotomayor, Veronica',71.75);
+insert into rankings (season, rank, player, points) values ('2016-17','36','Jackson, Sharon',70.75);
+insert into rankings (season, rank, player, points) values ('2016-17','37','Franco, Regina',40.88);
+insert into rankings (season, rank, player, points) values ('2016-17','38','Flores Segovia, Anakaren',40.00);
+insert into rankings (season, rank, player, points) values ('2016-17','39','Lee, Youngock',39.75);
+insert into rankings (season, rank, player, points) values ('2016-17','40','Dering, Jennifer',39.50);
+insert into rankings (season, rank, player, points) values ('2016-17','40','Hanson, Arrisa',39.50);
+insert into rankings (season, rank, player, points) values ('2016-17','42','Rivera, Ana Kristina',38.00);
+insert into rankings (season, rank, player, points) values ('2016-17','43','Hayes, Cheyenne',29.00);
+insert into rankings (season, rank, player, points) values ('2016-17','44','Gremley, Kelly',28.88);
+insert into rankings (season, rank, player, points) values ('2016-17','45','Hughes, Grace',27.00);
+insert into rankings (season, rank, player, points) values ('2016-17','46','Gudinas, Cheryl',26.88);
+insert into rankings (season, rank, player, points) values ('2016-17','46','Tyler, Linda',26.88);
+insert into rankings (season, rank, player, points) values ('2016-17','46','Whitmire, Robin',26.88);
+insert into rankings (season, rank, player, points) values ('2016-17','49','Baumbaugh, T.J.',25.00);
+insert into rankings (season, rank, player, points) values ('2016-17','49','Brewer, Aime',25.00);
+insert into rankings (season, rank, player, points) values ('2016-17','49','Guillemette, Veronique',25.00);
+insert into rankings (season, rank, player, points) values ('2016-17','52','Camacho, Ana',18.75);
+insert into rankings (season, rank, player, points) values ('2016-17','52','Daza, Jenny',18.75);
+insert into rankings (season, rank, player, points) values ('2016-17','52','Manilla, Erika',18.75);
+insert into rankings (season, rank, player, points) values ('2016-17','52','Ramirez, Andrea',18.75);
+insert into rankings (season, rank, player, points) values ('2016-17','52','Tisinger, Janel',18.75);
+insert into rankings (season, rank, player, points) values ('2016-17','57','Gonzalez, Lucia',16.38);
+insert into rankings (season, rank, player, points) values ('2016-17','58','Molina, Daniela',15.00);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Halahan, Jean',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Herrera Cristina, Daniela',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Jacquet, Briana',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Martinez, Andrea',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Sally Hallet',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Sarria, Angeles',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Shnurman, Hannah',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','59','Vandling, Christina',12.50);
+insert into rankings (season, rank, player, points) values ('2016-17','67','Morisette, Michelle',2.88);
+insert into rankings (season, rank, player, points) values ('2016-17','67','Sato, Maiko',2.88);
+insert into rankings (season, rank, player, points) values ('2016-17','69','Jin Young Seok',2.38);
+insert into rankings (season, rank, player, points) values ('2016-17','69','Kwon, Mahlee',2.38);
+insert into rankings (season, rank, player, points) values ('2016-17','71','Ana Jungeon',1.88);
+insert into rankings (season, rank, player, points) values ('2016-17','71','Ryder, Donna',1.88);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Andrade, Claudia',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Centellas, Valeria',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Del Granado Revollo, Gabriela',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Drury, Daniele',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Fonseca, Lynn',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Gonzalez, Ximena',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Hickey, Aisling',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Laime, Brenda',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Maldonado, Neyda',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Mazuelos, Melissa',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Molina, Micaela',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Perez, Alisson',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Prado, Abril',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Quiroga, Andrea',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Rehling, Roxanne',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Rivera, Masiel',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Rivero, Romina',0.00);
+insert into rankings (season, rank, player, points) values ('2016-17','73','Rodriguez, Ana Sofia Gasca',0.00);
+
+-- omitting these players; they were listed as tied for 73 but had "-" for points; they did not appear and will nto be ranked.
+
+-- insert into rankings (season, rank, player, points) values ('2016-17','73','Saunders, Jennifer',0);
+-- insert into rankings (season, rank, player, points) values ('2016-17','73','Shnurman, Gabrielle',0);
+-- insert into rankings (season, rank, player, points) values ('2016-17','73','Soley, Sofia',0);
+-- insert into rankings (season, rank, player, points) values ('2016-17','73','Vargas, Maria Jose',0);
+-- insert into rankings (season, rank, player, points) values ('2016-17','73','Wakimoto, Naomi',0);
+
+
+commit;
+
+-- now run name cleanup

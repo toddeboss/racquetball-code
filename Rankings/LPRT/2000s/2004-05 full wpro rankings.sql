@@ -1,0 +1,81 @@
+select * from rankings order by season, rank;
+
+create table rankings_20161201 as select * from rankings;
+
+
+select * from rankings where season='2004-05' order by rank;
+
+delete from rankings where season='2004-05';
+
+insert into rankings (season, rank, player, points) values ('2004-05','1','Van Hees, Christie',916.5);
+insert into rankings (season, rank, player, points) values ('2004-05','2','Gudinas, Cheryl',898);
+insert into rankings (season, rank, player, points) values ('2004-05','3','Rajsich, Rhonda',740);
+insert into rankings (season, rank, player, points) values ('2004-05','4','Wachtel, Kerri',442);
+insert into rankings (season, rank, player, points) values ('2004-05','5','Walsh, Kristen',400.5);
+insert into rankings (season, rank, player, points) values ('2004-05','6','Grisar, Angela',340);
+insert into rankings (season, rank, player, points) values ('2004-05','7','Brown, Tammy',330);
+insert into rankings (season, rank, player, points) values ('2004-05','8','Fisher, Adrienne',204);
+insert into rankings (season, rank, player, points) values ('2004-05','9','Moore, Diane',179.5);
+insert into rankings (season, rank, player, points) values ('2004-05','10','Kyzer, Brenda',156.5);
+insert into rankings (season, rank, player, points) values ('2004-05','11','Hallander, Kersten',132);
+insert into rankings (season, rank, player, points) values ('2004-05','12','Fisher, Kelley',129.5);
+insert into rankings (season, rank, player, points) values ('2004-05','13','Shattuck, Johanna',123.75);
+insert into rankings (season, rank, player, points) values ('2004-05','14','Acosta, Susy',105.5);
+insert into rankings (season, rank, player, points) values ('2004-05','15','Longoria, Paola',75);
+insert into rankings (season, rank, player, points) values ('2004-05','16','Loma, Carola',69.5);
+insert into rankings (season, rank, player, points) values ('2004-05','17','Fenton, Laura',65.5);
+insert into rankings (season, rank, player, points) values ('2004-05','18','Enriquez, Nancy',60.75);
+insert into rankings (season, rank, player, points) values ('2004-05','19','Bessent, Stephanie',60);
+insert into rankings (season, rank, player, points) values ('2004-05','20','Salas, Samantha',58.75);
+insert into rankings (season, rank, player, points) values ('2004-05','21','Torres, Rosy',49.5);
+insert into rankings (season, rank, player, points) values ('2004-05','22','Stoffregen, Gerri',48.75);
+insert into rankings (season, rank, player, points) values ('2004-05','23','Erardi, Denny',43.75);
+insert into rankings (season, rank, player, points) values ('2004-05','24','Boyea, Sharron',40);
+insert into rankings (season, rank, player, points) values ('2004-05','25','Rice, Jackie Paraiso',40);
+insert into rankings (season, rank, player, points) values ('2004-05','26','Csuk, Krystal',38.75);
+insert into rankings (season, rank, player, points) values ('2004-05','27','Foster, Amy',37.5);
+insert into rankings (season, rank, player, points) values ('2004-05','28','Powell, Lori-Jane',36);
+insert into rankings (season, rank, player, points) values ('2004-05','29','Morton, Karen',36);
+insert into rankings (season, rank, player, points) values ('2004-05','30','Hirobayashi, Kyoko',33.75);
+insert into rankings (season, rank, player, points) values ('2004-05','31','Garcia, Claudine',30.75);
+insert into rankings (season, rank, player, points) values ('2004-05','32','Hunter, Jennifer',30);
+insert into rankings (season, rank, player, points) values ('2004-05','33','Vonondarza, Ramona',28.75);
+insert into rankings (season, rank, player, points) values ('2004-05','34','GrandMaitre, Josee',22);
+insert into rankings (season, rank, player, points) values ('2004-05','35','Kozakai, Megumi',22);
+insert into rankings (season, rank, player, points) values ('2004-05','36','Nance, Jody',22);
+insert into rankings (season, rank, player, points) values ('2004-05','37','Russell, Kim',20.75);
+insert into rankings (season, rank, player, points) values ('2004-05','38','Gomez, Vivian',20);
+insert into rankings (season, rank, player, points) values ('2004-05','39','Ramirez, Claudia',20);
+insert into rankings (season, rank, player, points) values ('2004-05','40','Brandt, Laura',20);
+insert into rankings (season, rank, player, points) values ('2004-05','41','Fowler, Doreen',20);
+insert into rankings (season, rank, player, points) values ('2004-05','42','Feaster, Shannon',19.75);
+insert into rankings (season, rank, player, points) values ('2004-05','43','Saunders, Jennifer',19.75);
+insert into rankings (season, rank, player, points) values ('2004-05','44','Torres, Lupita',18.75);
+insert into rankings (season, rank, player, points) values ('2004-05','45','Moore, Linda',18.75);
+insert into rankings (season, rank, player, points) values ('2004-05','46','Kajino, Harumi',18.75);
+insert into rankings (season, rank, player, points) values ('2004-05','47','Davis, Damonique',18.75);
+insert into rankings (season, rank, player, points) values ('2004-05','48','Washington, Ginny',13.75);
+insert into rankings (season, rank, player, points) values ('2004-05','49','Jordan, Yolanda',12);
+insert into rankings (season, rank, player, points) values ('2004-05','50','Sanders, Lourdes',12);
+insert into rankings (season, rank, player, points) values ('2004-05','51','Guillemette, Veronique',11);
+insert into rankings (season, rank, player, points) values ('2004-05','52','Brodeur, Genevive',11);
+insert into rankings (season, rank, player, points) values ('2004-05','53','Satou, Maiko',11);
+insert into rankings (season, rank, player, points) values ('2004-05','54','Magrath, Andrea',11);
+insert into rankings (season, rank, player, points) values ('2004-05','55','Fonseca, Lynn',10);
+insert into rankings (season, rank, player, points) values ('2004-05','56','Darnell, Sherrika',10);
+insert into rankings (season, rank, player, points) values ('2004-05','57','Burth, Angela',10);
+insert into rankings (season, rank, player, points) values ('2004-05','58','Kubany, Sandy',10);
+insert into rankings (season, rank, player, points) values ('2004-05','59','Rivera, Jhoana',10);
+insert into rankings (season, rank, player, points) values ('2004-05','60','Miosi, Cheryl',4.75);
+insert into rankings (season, rank, player, points) values ('2004-05','61','Yoshimura, Seiko',4.25);
+insert into rankings (season, rank, player, points) values ('2004-05','62','Moreno, Marcela',3.75);
+insert into rankings (season, rank, player, points) values ('2004-05','63','Maldonado, Anita',3.75);
+insert into rankings (season, rank, player, points) values ('2004-05','64','Yang, Yeong A',3.75);
+insert into rankings (season, rank, player, points) values ('2004-05','65','Baumbaugh, T.J.',2.375);
+insert into rankings (season, rank, player, points) values ('2004-05','66','Fuller, Jesi',2.375);
+insert into rankings (season, rank, player, points) values ('2004-05','67','Guzman, Eleni',2.375);
+insert into rankings (season, rank, player, points) values ('2004-05','68','Dennison, Sandy',1.875);
+insert into rankings (season, rank, player, points) values ('2004-05','69','Gordon, Andrea',0);
+
+
+commit;

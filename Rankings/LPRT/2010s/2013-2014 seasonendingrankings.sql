@@ -1,0 +1,80 @@
+select * from rankings order by season, rank;
+
+create table rankings_20161201 as select * from rankings;
+
+select * from rankings where season='2010-11' order by rank;
+
+insert into rankings (season, rank, player, points) values ('2013-14','1','Longoria, Paola',2780);
+insert into rankings (season, rank, player, points) values ('2013-14','2','Rajsich, Rhonda',1405);
+insert into rankings (season, rank, player, points) values ('2013-14','3','Vargas, Maria',1218.5);
+insert into rankings (season, rank, player, points) values ('2013-14','4','Salas, Samantha',786.5);
+insert into rankings (season, rank, player, points) values ('2013-14','5','Amaya, Cristina',760);
+insert into rankings (season, rank, player, points) values ('2013-14','6','Lambert, Frederique',634);
+insert into rankings (season, rank, player, points) values ('2013-14','7','Kirch, Aubrey',521.5);
+insert into rankings (season, rank, player, points) values ('2013-14','8','Acosta-Mendoza, Susy',488.5);
+insert into rankings (season, rank, player, points) values ('2013-14','9','Sotomayor, Veronica',471);
+insert into rankings (season, rank, player, points) values ('2013-14','10','Davis, Damonique',443.25);
+insert into rankings (season, rank, player, points) values ('2013-14','11','Gudinas, Cheryl',385);
+insert into rankings (season, rank, player, points) values ('2013-14','12','Rascon, Sofia',318.75);
+insert into rankings (season, rank, player, points) values ('2013-14','13','Fisher Haynes, Adrienne',307.5);
+insert into rankings (season, rank, player, points) values ('2013-14','14','Paz Munoz, Maria',272.5);
+insert into rankings (season, rank, player, points) values ('2013-14','15','Key, Michelle',239.69);
+insert into rankings (season, rank, player, points) values ('2013-14','16','Jackson, Sharon',235.5);
+insert into rankings (season, rank, player, points) values ('2013-14','17','Saunders, Jennifer',228.25);
+insert into rankings (season, rank, player, points) values ('2013-14','18','Miller, Hailey',209.25);
+insert into rankings (season, rank, player, points) values ('2013-14','19','Munoz, Carla',203.5);
+insert into rankings (season, rank, player, points) values ('2013-14','20','Lotts, Sheryl',194.25);
+insert into rankings (season, rank, player, points) values ('2013-14','21','Baumbaugh, T.J.',177.75);
+insert into rankings (season, rank, player, points) values ('2013-14','22T','Luque, Carolina',163.25);
+insert into rankings (season, rank, player, points) values ('2013-14','22T','Scales, Linda',163.25);
+insert into rankings (season, rank, player, points) values ('2013-14','24','Parilla, Jessica',147.55);
+insert into rankings (season, rank, player, points) values ('2013-14','25','Rodriguez, Maria',136.25);
+insert into rankings (season, rank, player, points) values ('2013-14','26','Orozco, Cecilia',99.73);
+insert into rankings (season, rank, player, points) values ('2013-14','27','Tisinger, Janel',99.42);
+insert into rankings (season, rank, player, points) values ('2013-14','28','Paraiso, Jackie',93.05);
+insert into rankings (season, rank, player, points) values ('2013-14','29','Csuk, Krystal',85.75);
+insert into rankings (season, rank, player, points) values ('2013-14','30','Acquilar, Diana',83.5);
+insert into rankings (season, rank, player, points) values ('2013-14','31','Gremley, Kelly',83.25);
+insert into rankings (season, rank, player, points) values ('2013-14','32','Herrera, Alexandra',77.23);
+insert into rankings (season, rank, player, points) values ('2013-14','33','Tobon, Marianna',71.75);
+insert into rankings (season, rank, player, points) values ('2013-14','34','Rivera, Masiel',70.5);
+insert into rankings (season, rank, player, points) values ('2013-14','35','Gonzalez, Lucia',53);
+insert into rankings (season, rank, player, points) values ('2013-14','36','Kim, Nawoo',33.25);
+insert into rankings (season, rank, player, points) values ('2013-14','37','Flores, Ana Laura',32.5);
+insert into rankings (season, rank, player, points) values ('2013-14','38','Lee, Youngock',31.25);
+insert into rankings (season, rank, player, points) values ('2013-14','39','Andrade, Claudia',28.75);
+insert into rankings (season, rank, player, points) values ('2013-14','40','Gonzalez, Ximena',27);
+insert into rankings (season, rank, player, points) values ('2013-14','41','Brandt, Laura',26);
+insert into rankings (season, rank, player, points) values ('2013-14','42T','Cooperrider, Jordan',25);
+insert into rankings (season, rank, player, points) values ('2013-14','42T','Ferina, Kimi',25);
+insert into rankings (season, rank, player, points) values ('2013-14','42T','Hayes, Cheyenne',25);
+insert into rankings (season, rank, player, points) values ('2013-14','42T','Wachtel, Kerri',25);
+insert into rankings (season, rank, player, points) values ('2013-14','46T','Rivera, Anna',20);
+insert into rankings (season, rank, player, points) values ('2013-14','46T','Rivera, Erin',20);
+insert into rankings (season, rank, player, points) values ('2013-14','46T','Villagomez, Natalia',20);
+insert into rankings (season, rank, player, points) values ('2013-14','49T','Guillemette, Veronique',18.75);
+insert into rankings (season, rank, player, points) values ('2013-14','49T','Wakimoto, Naomi',18.75);
+insert into rankings (season, rank, player, points) values ('2013-14','51','Sato, Maiko',16.75);
+insert into rankings (season, rank, player, points) values ('2013-14','52','Santillan, Luisa',15.38);
+insert into rankings (season, rank, player, points) values ('2013-14','53','Brewer, Aime',15);
+insert into rankings (season, rank, player, points) values ('2013-14','54','Berry, Lily',13.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Bellows, Kristen',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Delsarto, Lucy',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Gomar, Marie',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Loredo, Jocelyn',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Manilla, Erika',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','DelliSanti, Maria',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Martinez, Gabriella',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Nunez, Paola',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Parades Guillen,',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Rehling, Roxanne',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Sauma, Melania',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','55T','Soley, Sofia',12.5);
+insert into rankings (season, rank, player, points) values ('2013-14','67','Kato, Hiroko',4.25);
+insert into rankings (season, rank, player, points) values ('2013-14','68T','Kwon, Mahlee',3.75);
+insert into rankings (season, rank, player, points) values ('2013-14','68T','Perez, Montse',3.75);
+
+
+
+
+commit;

@@ -1,0 +1,72 @@
+select * from rankings order by season, rank;
+
+create table rankings_20161201 as select * from rankings;
+
+
+select * from rankings where season='2005-06' order by rank;
+
+insert into rankings (season, rank, player, points) values ('2005-06','1','Rajsich, Rhonda',777.5);
+insert into rankings (season, rank, player, points) values ('2005-06','2','Gudinas, Cheryl',727.525);
+insert into rankings (season, rank, player, points) values ('2005-06','3','Van Hees, Christie',620);
+insert into rankings (season, rank, player, points) values ('2005-06','4','Walsh, Kristen',458);
+insert into rankings (season, rank, player, points) values ('2005-06','5','Grisar, Angela',448.63);
+insert into rankings (season, rank, player, points) values ('2005-06','6','Moore, Diane',266.5);
+insert into rankings (season, rank, player, points) values ('2005-06','7','Kyzer, Brenda',236);
+insert into rankings (season, rank, player, points) values ('2005-06','8','Shattuck, Jo',224.88);
+insert into rankings (season, rank, player, points) values ('2005-06','9','Brown, Tammy',218.5);
+insert into rankings (season, rank, player, points) values ('2005-06','10','Fenton, Laura',172.5);
+insert into rankings (season, rank, player, points) values ('2005-06','11','Acosta, Susy',137.25);
+insert into rankings (season, rank, player, points) values ('2005-06','12','Hallander, Kersten',115.5);
+insert into rankings (season, rank, player, points) values ('2005-06','13','Fisher, Adrienne',109.25);
+insert into rankings (season, rank, player, points) values ('2005-06','14','Powell, Lori-Jane',107.13);
+insert into rankings (season, rank, player, points) values ('2005-06','15','Fowler, Doreen',89.75);
+insert into rankings (season, rank, player, points) values ('2005-06','16','Salas, Samantha',89.5);
+insert into rankings (season, rank, player, points) values ('2005-06','17','Wachtel, Kerri',77.5);
+insert into rankings (season, rank, player, points) values ('2005-06','18','Morton, Karen',69.25);
+insert into rankings (season, rank, player, points) values ('2005-06','19','Gomez, Vivian',63.75);
+insert into rankings (season, rank, player, points) values ('2005-06','20','Hirobayashi, Kyoko',54.75);
+insert into rankings (season, rank, player, points) values ('2005-06','21','Fisher, Kelley',48.5);
+insert into rankings (season, rank, player, points) values ('2005-06','22','GrandMaitre, Josee',47.51);
+insert into rankings (season, rank, player, points) values ('2005-06','23','Gellman, Rachel',40);
+insert into rankings (season, rank, player, points) values ('2005-06','24','Enriquez, Nancy',38.75);
+insert into rankings (season, rank, player, points) values ('2005-06','25','Saunders, Jennifer',37.5);
+insert into rankings (season, rank, player, points) values ('2005-06','26','Guillemette, Veronique',32.5);
+insert into rankings (season, rank, player, points) values ('2005-06','27','Longoria, Paola',29.75);
+insert into rankings (season, rank, player, points) values ('2005-06','28','Foster, Amy',22);
+insert into rankings (season, rank, player, points) values ('2005-06','29','Evans, Cyd',20);
+insert into rankings (season, rank, player, points) values ('2005-06','29','Greene, Mimi',20);
+insert into rankings (season, rank, player, points) values ('2005-06','29','Rollins, Haley',20);
+insert into rankings (season, rank, player, points) values ('2005-06','29','McFadden, Michelle',20);
+insert into rankings (season, rank, player, points) values ('2005-06','29','Holtslander, Khanh',20);
+insert into rankings (season, rank, player, points) values ('2005-06','29','Fonseca, Lynn',19.75);
+insert into rankings (season, rank, player, points) values ('2005-06','35','Garcia, Claudine',19.75);
+insert into rankings (season, rank, player, points) values ('2005-06','36','Boyea, Sherron',18.75);
+insert into rankings (season, rank, player, points) values ('2005-06','36','Baumbaugh, T.J.',18.75);
+insert into rankings (season, rank, player, points) values ('2005-06','36','Kadosumi, Ayako',18.75);
+insert into rankings (season, rank, player, points) values ('2005-06','36','Neubauer, Julie',18.75);
+insert into rankings (season, rank, player, points) values ('2005-06','36','Mi-Lee, Young',18.75);
+insert into rankings (season, rank, player, points) values ('2005-06','41','Gopie, Jacqueline',14.375);
+insert into rankings (season, rank, player, points) values ('2005-06','42','Nakayama, Kazuko',13.75);
+insert into rankings (season, rank, player, points) values ('2005-06','43','Fuller, Jesi',12.875);
+insert into rankings (season, rank, player, points) values ('2005-06','44','Catron, Annie',12.5);
+insert into rankings (season, rank, player, points) values ('2005-06','44','Earl, Michelle',12.5);
+insert into rankings (season, rank, player, points) values ('2005-06','44','Masuyama, Rie',12.5);
+insert into rankings (season, rank, player, points) values ('2005-06','47','Torres, Karen',11.875);
+insert into rankings (season, rank, player, points) values ('2005-06','47','Tsuruta, Ayako',11.875);
+insert into rankings (season, rank, player, points) values ('2005-06','49','Torres, Rosy',11);
+insert into rankings (season, rank, player, points) values ('2005-06','50','Erardi, Denny',10);
+insert into rankings (season, rank, player, points) values ('2005-06','50','Vonondarza, Ramona',10);
+insert into rankings (season, rank, player, points) values ('2005-06','50','Enriquez, Stephanie',10);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Darnell, Sherrika',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Kajino, Harumi',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Davis, Damonique',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Mareno, Marcela',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Guzman, Eleni',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Haynes, Denise',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Nunez, Paola',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Lynch, Jennifer',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Bird, Stephanie',1.875);
+insert into rankings (season, rank, player, points) values ('2005-06','53','Noda, Estuko',1.875);
+
+
+commit;
