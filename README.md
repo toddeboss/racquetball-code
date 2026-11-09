@@ -14,7 +14,7 @@ ton more sense to centralize into one Git repo that could be shared in the event
 Here's a quick guide to the top level of the Repo.  Singles and Doubles are divided into separate directories but discussed together below:
 
 | Top Level Directory | Nature of Data |
-| -------- | -------- | -------- |
+| -------- | -------- | 
 | Amateur | Amateur National events.  Presently, just USA, Mexico, and Canada have regular R2sports run National events that we enter.  USA now combines National Singles and Doubles into one event (National Indoors).  Canada has two qualifiers then Nationals in May.  Mexico generally has just one Nationals event in February, but sometimes has off-cycle qualifiers for big events like Worlds or the Pan Am Games |
 | cgi-bin | The main perl code that runs out of the cgi-bin directory of the www.proracquetballstats.com website.  There's 5 main perl files that run together to support the site |
 | IRF  | International Racquetball Federation.  These are any IRF run tournament, whether they’re regional (like South American Games), or Global (annual Pan American Racquetball championships, bi-annual Worlds, and every-4 years World Games and Pan Am Games). |
