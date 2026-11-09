@@ -16,8 +16,7 @@ Here's a quick guide to the top level of the Repo.  Singles and Doubles are divi
 | Top Level Directory | Nature of Data |
 | -------- | -------- | 
 | Amateur | Amateur National events.  Presently, just USA, Mexico, and Canada have regular R2sports run National events that we enter.  USA now combines National Singles and Doubles into one event (National Indoors).  Canada has two qualifiers then Nationals in May.  Mexico generally has just one Nationals event in February, but sometimes has off-cycle qualifiers for big events like Worlds or the Pan Am Games |
-| cgi-bin | The main perl code that runs out of the cgi-bin directory of the www.proracquetballstats.com website.  There's 5 main perl files that run together to support the site |
-| IRF  | International Racquetball Federation.  These are any IRF run tournament, whether they’re regional (like South American Games), or Global (annual Pan American Racquetball championships, bi-annual Worlds, and every-4 years World Games and Pan Am Games). |
+| IRF  | International Racquetball Federation.  These are any IRF run tournament, whether they’re regional (like South American Games), or Global (annual Pan American Racquetball championships, bi-annual Worlds, and every-4 years World Games and Pan Am Games).  There's also a directory for the Team load files.|
 | IRT | The Men’s Pro tour.  Currently called the IRT, has been called other names in the past. |
 | Juniors | All Junior Nationals and Junior worlds.  USA and Mexico have stand-alone Junior national events, Canada now holds Junior championships with its May national championships.  IRF Junior Worlds is in December. |
 | LPRT | Ladies Pro Racquetball Tour; the Women’s pro tour.  Has been called other names in the past. |
@@ -27,3 +26,4 @@ Here's a quick guide to the top level of the Repo.  Singles and Doubles are divi
 | WOR Court List | This is a couple of SQL files to do data loading of the core WOR Court list into a table for further processing |
 | WOR | World Outdoor Racquetball.  These are just the “major” WOR events; Beach Bash, Outdoor Nationals, and 3WallBall. |
 | WRT | World Racquetball Tour.  The World Racquetball Tour ceased operations in 2019.  The data is still in the database and the results are still online, but no new data entry is documented below.  Only active entities are documented. |
+| cgi-bin | The main perl code that runs out of the cgi-bin directory of the www.proracquetballstats.com website.  There's 5 main perl files that run together to support the site |
