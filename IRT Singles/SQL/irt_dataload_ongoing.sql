@@ -22,7 +22,7 @@ delete from results_staging;
 delete from seedings_staging;
 
 
-load data local infile 'c:/Dropbox/z IT/temp/irt_pleasanton26_singles.csv' into table results_staging
+load data local infile 'c:/Dropbox/z IT/temp/irt_louisiana_2026_singles.csv' into table results_staging
 fields terminated by ',' enclosed by '"' lines terminated by '\n';
 
 -- load data local infile 'C:/Users/tboss/Dropbox/z IT/incoming/rball/backup copies/irt_2003usopen_qualifiers.csv' into table results_staging
@@ -61,17 +61,17 @@ SET SQL_SAFE_UPDATES = 0;
 
 select * from tourneys order by tmp_date desc;
 
-update tourneys set preview_url='https://blog.proracquetballstats.com/index.php/2026/04/30/irt-2026-pro-nationals-preview/' 
- where event='2026 IRT Pro Nationals';
+update tourneys set preview_url='https://blog.proracquetballstats.com/index.php/2026/11/13/irt-2026-34th-annual-turkey-shoot-preview/' 
+ where event='2026 34th Annual Turkey Shoot';
 
-update tourneys set wrapup_url='https://blog.proracquetballstats.com/index.php/2026/05/04/irt-2026-pro-nationals-recap/'
- where event='2026 IRT Pro Nationals';
+update tourneys set wrapup_url='https://blog.proracquetballstats.com/index.php/2026/11/16/irt-34th-annual-turkey-shootout-recap/'
+ where event='2026 34th Annual Turkey Shoot';
 
 
 
 -- Seedings
 
-load data local infile 'c:/Dropbox/z IT/temp/irt_pleasanton26_singles_seeding.csv' into table seedings_staging
+load data local infile 'c:/Dropbox/z IT/temp/irt_louisiana_2026_singles_seeding.csv' into table seedings_staging
 fields terminated by ',' enclosed by '"' lines terminated by '\r\n';
 
 -- load data local infile 'C:/Users/tboss/Dropbox/z IT/incoming/rball/backup copies/irt_1999usopen_results_seedings.csv' into table seedings_staging
@@ -97,6 +97,6 @@ commit;
 
 
 delete from banner;
-insert into banner values ('Database updated to 2026 Golden State Open','11/9/26');
+insert into banner values ('Database updated to 2026 Turkey Shoot in New Orleans','11/16/26');
 commit;
 
